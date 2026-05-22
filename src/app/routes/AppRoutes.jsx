@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 import { AuthLayout } from "../layouts/AuthLayout";
-import { Login } from "../../features/auth/ui/pages/Login";
-import { Signup } from "../../features/auth/ui/pages/Signup";
 import { MainLayout } from "../layouts/MainLayout";
 import { HomePage } from "../../features/MainLayout/ui/pages/HomePage";
+import { Signin } from "../../features/auth/ui/pages/Signin";
+import { Signup } from "../../features/auth/ui/pages/Signup";
 
 export const AppRoutes = () => {
   const router = createBrowserRouter([
@@ -12,8 +12,8 @@ export const AppRoutes = () => {
       element: <AuthLayout />,
       children: [
         {
-          path: "",
-          element: <Login />,
+          index: true,
+          element: <Signin />,
         },
         {
           path: "signup",
